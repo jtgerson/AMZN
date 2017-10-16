@@ -31,7 +31,7 @@ print(fuzz.token_set_ratio('Barack Obama', 'Barack H. Obama')) # 100 token_set r
 
 print(fuzz.token_sort_ratio('Barack H Obama', 'Barack H. Obama')) # 100
 
-print(fuzz.token_set_ratio('Barack H Obama', 'Barack H. Obama')) # 100 
+print(fuzz.token_set_ratio('Barack H Obama', 'Barack H. Obama','Barack . Obama')) # 100 
 
 query = 'Barack Obama'
 choices = ['Barack H Obama', 'Barack H. Obama' , 'B. Obama']
@@ -40,3 +40,10 @@ print(process.extract(query, choices))
 
 # If we want only the top one
 print(process.extractOne(query, choices))
+
+#text matching - has to be exact
+data1 = "Josh", "Bob", "Sameer", "Andrew"
+data2 = "Josh", "Bob", "sameer", "Ryan"
+Matched = (set(data1) & set(data2))
+Matched = print(set(data1).intersection(data2)) #alternative method
+print(Matched)

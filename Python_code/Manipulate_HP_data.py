@@ -64,3 +64,4 @@ print(df.groupby(by=['product_royalty_earner'])['units'].sum())
 #sum units that aren't in 10/1/2017 and not fantastic beasts
 #print(df.loc[(df['yr_mth_name'] !="10/1/2017") & (df['product_royalty_earner'] !="Pottermore Limited - Fantastic Beasts") & (df['product_royalty_earner'] !="Pottermore Limited / German Translations / Phantastische Tierwesen"), 'units'].sum())
 
+ 
